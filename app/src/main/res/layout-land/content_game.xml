@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="10"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="org.secuso.privacyfriendlyludo.activities.GameActivity"
+    tools:showIn="@layout/activity_game">
+
+<RelativeLayout
+    android:id="@+id/LayoutGame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.secuso.privacyfriendlyludo.activities.BoardView
+        android:id="@+id/board"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="@color/middlegrey"
+        android:clickable="true"></org.secuso.privacyfriendlyludo.activities.BoardView>
+
+    <ImageView
+        android:id="@+id/resultOne"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="@dimen/dots_height"
+        android:layout_marginTop="@dimen/slide_actions"
+        android:layout_toRightOf="@+id/board"
+        android:background="@drawable/dice"
+        android:gravity="right|center_horizontal"
+        android:visibility="invisible"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/changePlayerMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultOne"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@+id/board"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/showTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/changePlayerMessage"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/board"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+</RelativeLayout>
+    </LinearLayout>
